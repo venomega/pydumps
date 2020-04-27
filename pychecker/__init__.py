@@ -35,13 +35,11 @@ def main():
     while True:
         pwd = sys.path[0]
         fd = open(os.path.join(pwd,"delay.txt"), 'r')
-
         time.sleep (
-            int(
-                fd.read()
+            int( fd.read()
+            
             )
         )
-
         fd.close()
         print ("asd")
         token = isConnected()
@@ -68,5 +66,11 @@ def main():
 
 
 if __name__ == "__main__":
-
+    """
+    try :
+        main()
+    except:
+        import sys
+        sys.exit(0)
+    """
     main()
