@@ -1,0 +1,1 @@
+<html><body><form name="CMCCWLANFORM" method="post" action="https://secure.etecsa.net:8443">  <input type="hidden" name="wlanuserip" value="10.202.194.250">  <input type="hidden" name="wlanparameter" value="45d4de4aa94f30ccc1ad5016da3ca4997430c881631cc59d"></form><script language='javascript'>    CMCCWLANFORM.submit();</script></body></html>
