@@ -5,7 +5,7 @@ import time
 os.chdir(f"{sys.path[0]}")
 pwd = sys.path[0]
 dbs = open(os.path.join(pwd,"dbs.conf"), "r").read().split()
-arch= open(os.path.join(pwd,"arch.conf"), "r").read()[:-1]
+arch= open(os.path.join(pwd,"arch.conf"), "r").read().split()[0]
 for db in dbs:
     token =os.popen(f"ls ./mirror/{arch}/{db}/","r" ).read()
     fd = open("/tmp/asdasdasd","w")

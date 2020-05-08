@@ -6,8 +6,8 @@ os.chdir (sys.path[0])
 os.popen(f"echo '{os.getpid()}' >> PID")
 
 dbs = open("./dbs.conf", "r").read().split()
-arch= open("./arch.conf", "r").read()[:-1]
-url = open("./url.conf", "r").read()[:-1]
+arch= open("./arch.conf", "r").read().split()[0]
+url = open("./url.conf", "r").read().split()[0]
 
 
 for db in dbs:
@@ -22,7 +22,7 @@ for db in dbs:
     # start the Download :)
     
     
-    os.popen(f"aria2c --auto-file-renaming=false -l ./aria2c.log  -x 4 -j 1 -k 1M -i ./mirror/{arch}/{db}/{db}.fetch -d ./mirror/{arch}/{db}/").read()
+    os.popen(f"aria2c -x 4 -j 4 -k 1M --auto-file-renaming=false -l ./aria2c.log  -i ./mirror/{arch}/{db}/{db}.fetch -d ./mirror/{arch}/{db}/").read()
     
 
 

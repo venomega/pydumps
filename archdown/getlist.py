@@ -4,12 +4,13 @@ import sys
 os.chdir(sys.path[0])
 
 dbs=open("dbs.conf", "r").read().split()
-arch=open("arch.conf", "r").read()[:-1]
+arch=open("arch.conf", "r").read().split()[0]
+url=open("url.conf", "r").read().split()[0]
 total= 0
 fore= open(f"./mirror/{arch}/size", "w")
 for db in dbs:
     
-    os.system(f"/usr/bin/w3m -dump download.jovenclub.cu/repos/archlinux/{db}/os/{arch}/ > /tmp/dump")
+    os.system(f"/usr/bin/w3m -dump {url}{db}/os/{arch}/ > /tmp/dump")
 
     fd = open("/tmp/dump","r")
     file = open(f"./mirror/{arch}/{db}.list","w")
@@ -20,7 +21,7 @@ for db in dbs:
             continue
     
         token = i.split()
-        print (token[1], file=file)
+        print (token[0], file=file)
         if token[-1] == "KB":
             counter += int(token[-2])
         else:
