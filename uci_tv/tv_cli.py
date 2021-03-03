@@ -27,14 +27,16 @@ banner1 = """
 4 - telesur
 5 - cuba internacional
 6 - clave
+
+0 - Salir
 """
 
 class Channel(object):
     def __init__(self):
         URL=""
-    def play(self):
+    def play(self, str):
         global reproductor
-        os.system(f"{reproductor} {self}")
+        os.system(f"{reproductor} {str}")
     def cubavision(self):
         self.URL = "mms://ucimedia.uci.cu/e7dd297dch6"
         self.play(self.URL)
@@ -58,17 +60,20 @@ class Channel(object):
         
 def caller(self):
     if self == 1:
-        channel.cubavision()
+        a = Channel()
+        a.cubavision()
     if self == 2:
-        channel.multivision()
+        Channel.multivision()
     if self == 3:
-        channel.rebelde()
+        Channel.rebelde()
     if self == 4:
-        channel.telesur()
+        Channel.telesur()
     if self == 5:
-        channel.internacional()
+        Channel.internacional()
     if self == 6:
-        channel.clave()
+        Channel.clave()
+    if self == 0:
+        exit(0)
 
         
 def error(self):
