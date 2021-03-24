@@ -1,7 +1,8 @@
-
 #!/usr/bin/env python3
+
 import socket
 import sys
+
 
 def help():
         print ("USAGE:\n <syntax>\n program <option> <ip address> </file/to/send>\n\n<options>\n send\nrecv", file=sys.stderr)
@@ -14,13 +15,11 @@ class stream(object):
         EXAMPLE 1:
         
         peer 1   <=   ip: 1.1.1.1
-        >>> import socket
-        >>> s = socket.socket()
+        >>> s = stream()
         >>> s.serv_send("./file/to/send")
         
         peer 2  <= ip 1.1.1.2
-        >>> import socket
-        >>> s = socket.socket()
+        >>> s = steam()
         >>> s.connect_recv("1.1.1.1", "./file/to/recv")
         
         `peer 1` and `peer 2` are two users running this same library
@@ -81,6 +80,7 @@ class stream(object):
 	                else:
 		                sock.send(asd)
                 fd.close()
+
         def serv_recv(self,filename):
                 """
                 listen to and receive given file
