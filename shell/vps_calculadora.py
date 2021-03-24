@@ -4,9 +4,9 @@ p_C = 0.04
 p_R = 0.05
 
 # cantidad
-c_A = 8  # <- GB HDD
-c_C = 4  # <- Cores CPU
-c_R = 2  # <- GB RAM
+c_A = 20  # <- GB HDD
+c_C = 1  # <- Cores CPU
+c_R = 0.5  # <- GB RAM
 
 # total/h
 A = p_A * c_A
