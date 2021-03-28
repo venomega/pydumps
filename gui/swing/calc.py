@@ -77,9 +77,7 @@ for button in d.keys():
 frame.setBounds(10, 10, 300, 200)
 frame.setVisible(True)
 frame.setResizable(False)
+
 LAF="com.sun.java.swing.plaf.motif.MotifLookAndFeel"
-#LAF="javax.swing.plaf.metal.MetalLookAndFeel"
-#LAF="javax.swing.plaf.nimbus.NimbusLookAndFeel"
-#LAF="com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 UIManager.setLookAndFeel(LAF)
 SwingUtilities.updateComponentTreeUI(frame)
