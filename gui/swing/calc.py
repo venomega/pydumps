@@ -25,7 +25,6 @@ def addOper(obj):
 
 def result():
     global buffer, bufferlabel
-    print (buffer)
     if '+' in buffer or '-' in buffer or '*' in buffer or '/' in buffer:
             buffer = str(eval(buffer))
             bufferlabel.setText(buffer)
