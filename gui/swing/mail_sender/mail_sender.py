@@ -10,7 +10,7 @@ class win(JFrame):
     def __init__(self, title="Mail Sender"):
         JFrame(title)
         self.setLayout(None)
-        self.setBounds(10, 10, 300, 300)
+        self.setBounds(10, 10, 400, 350)
         self.show()
         self.build()
 
