@@ -64,5 +64,5 @@ class win(JFrame):
 o = win()
 LAF="com.sun.java.swing.plaf.motif.MotifLookAndFeel"
 UIManager.setLookAndFeel(LAF)
-#SwingUtilities.updateComponentTreeUI(frame)
+SwingUtilities.updateComponentTreeUI(o)
  
