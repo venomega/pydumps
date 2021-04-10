@@ -1,6 +1,6 @@
 #!/usr/bin/env jython
 from java.awt import Color
-from javax.swing import JFrame, JLabel, JButton, JTextField, JTextArea, JScrollPane
+from javax.swing import *
 from javax.swing import UIManager
 from javax.swing import SwingUtilities
 
