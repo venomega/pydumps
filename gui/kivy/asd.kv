@@ -1,0 +1,21 @@
+<Ball>:
+    canvas:
+        Ellipse:
+            pos: 120, 210
+            size: 40, 40
+<Scene>:
+    canvas:
+        Rectangle:
+            pos:  self.width/2 -1 , 0
+            size: 2, self.height
+        Ellipse:
+            pos: 120, 210
+            size: 40, 40
+    Label:
+        font_size: 44
+        pos: root.right * 0.20, root.top - 100
+        text: "0"
+    Label:
+        font_size: 44
+        pos: root.right * 0.70, root.top - 100
+        text: "0"
