@@ -3,6 +3,16 @@ import threading
 import os
 
 
+ip = sys.argv[1]
+token = ip[::-1]
+gold_number = token.index(".")
+
+if ip.count(".") != 3:
+    print ("error, argument provided is not an ipv4 addreess")
+    exit(1)
+
+
+
 def do(*list):
     buff = ""
     for element in list:
@@ -12,11 +22,7 @@ def do(*list):
     if "ttl" in data:
         print (buff)
  
-
-ip = sys.argv[1]
-token = ip[::-1]
-gold_number = token.index(".")
-
+        
 
 for i in range(255):
     threading.Thread(target=do,args=f"{ip[:-gold_number]}{i}").start()
