@@ -1,0 +1,4 @@
+title=myApp
+author=Hello_There
+orientation=portrait
+
